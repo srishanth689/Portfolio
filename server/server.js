@@ -16,8 +16,9 @@ dotenv.config();
 const app = express();
 
 // Middleware
+// Allow cross-origin requests from any frontend (prod URLs change on redeploy)
 app.use(cors({
-  origin: process.env.CLIENT_URL,
+  origin: true,
   credentials: true
 }));
 app.use(express.json());

@@ -1,7 +1,8 @@
 import axios from "axios";
 
+// Base URL pinned to production API to avoid env misconfiguration during deploys
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000/api",
+  baseURL: "https://mern-portfolio-backend-v2.onrender.com/api",
   headers: {
     "Content-Type": "application/json"
   }
