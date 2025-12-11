@@ -8,7 +8,12 @@ const router = express.Router();
 // Initialize admin (one-time setup)
 router.post("/init-admin", async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const email = process.env.ADMIN_EMAIL;
+    const password = process.env.ADMIN_PASSWORD;
+
+    if (!email || !password) {
+      return res.status(500).json({ message: "ADMIN_EMAIL and ADMIN_PASSWORD must be set in environment variables" });
+    }
 
     const existing = await User.findOne({ email });
     if (existing) {
