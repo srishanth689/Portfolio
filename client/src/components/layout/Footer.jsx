@@ -14,10 +14,10 @@ const Footer = () => {
         >
           <p className="mb-2">Built with React, Node.js, and MongoDB</p>
           <div className="flex justify-center gap-6 mb-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
+            <a href="https://github.com/srishanth689/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
               GitHub
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
+            <a href="https://linkedin.com/in/srishanth-30aug2004/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
               LinkedIn
             </a>
           </div>
